@@ -9,7 +9,8 @@ class FlightSchool < Sinatra::Base
   end
 
   get "/airports/:code" do
-    broken        
+    broken
+    2222        
     begin
       airport_status = Radar.status_for(params[:code])
       erb :airport, locals: { status: airport_status }
